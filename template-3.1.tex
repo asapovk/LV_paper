@@ -1,0 +1,415 @@
+\documentclass{webofc}
+\usepackage[varg]{txfonts}   % Web of Conferences font
+%
+% Put here some packages required or/and some personnal commands
+%
+%
+
+\def\const{\mbox{const}}
+\def\l{\left(}
+\def\r{\right)}
+\def\la{\langle }
+\def\ra{\rangle }
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+%\newcommand{\tg}{\mathop{\rm tg}\nolimits}
+\renewcommand{\tanh}{\mathop{\rm th}\nolimits}
+%\newcommand{\ch}{\mathop{\rm ch}\nolimits}
+\renewcommand{\ln}{\mathop{\rm ln}\nolimits}
+
+\newcommand{\Tr}{{\rm Tr}}
+\def\half{\frac{1}{2}}
+\newcommand{\eq}[1]{(\ref{#1})}
+
+
+
+\begin{document}
+%
+\title{Photon splitting bound on Lorentz Violation in QED from multi-TeV photon observation.}
+%
+% subtitle is optionnal
+%
+%%%\subtitle{Do you have a subtitle?\\ If so, write it here}
+
+\author{\firstname{Konstantin} \lastname{Astapov}\inst{1}\fnsep\thanks{\email{astapov@ms2.inr.ac.ru}} \and
+        \firstname{Petr} \lastname{Satunin}\inst{1}\fnsep\thanks{\email{satunin@ms2.inr.ac.ru}} \and
+        \firstname{Dmitry} \lastname{Kirpichnikov}\inst{1}\fnsep\thanks{\email{kirpich@ms2.inr.ac.ru}}
+}
+
+\institute{Institute for Nuclear Research of the Russian Academy of Sciences,
+  Moscow 117312, Russia}
+
+\abstract{%
+  We calculate the width of photon splitting to three photons in a special model of quantum electrodynamics with broken Lorentz invariance. This process may lead to a sharp cut-off in a photon spectrum of a given astrophysical source. Analysing experimental data, we set a constraint on Lorentz-violating mass scale from the absence of such cut-off in the Crab Nebula spectrum.
+}
+%
+\maketitle
+%
+
+
+\section{Introduction}
+\label{intro}
+
+Lorentz invariance (LI) is the one of fundamental laws of Nature. However, in several theoretical models it can be broken. These models are mostly motivated by different approaches to construct quantum theory of gravity (see review \cite{Liberati:2013xla} and references therein). The common approach is to consider Lorentz invariance violation (LV) in matter sector is the framework of effective field theory (EFT) \cite{Colladay:1998fq}.  
+
+One of the differences between models with LV and LI ones is modification of particle reactions. In presence of hypothetical LV some processes forbidden in LI models may be allowed. The well-known examples are photon decay to an electron-positron pair $\gamma \to e^+e^-$ and vacuum Cerenkov radiation $e^-\to e^-\gamma$ \cite{Coleman:1997xq}. Cross-sections of other processes may be modified as well. The absence of experimental observations of such effects constrain LV. Due to these processes a hypothesys of a certain type of LV may be experimentally tested. Experimental bounds are gathered in data tables \cite{Kostelecky:2008ts}.
+
+\section{The model}
+\label{The model}
+Reactions studying in the scope of present work involve LV in photon sector of SM then the Lagrangian of the model is the QED part of SM Lagrangian with an additional LV term, quartic on space derivatives for a photon and suppressed by the second power of LV mass scale $M_{LV}$.
+\begin{equation}\label{L1}
+\mathcal{L}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}  \mp \frac{1}{2 M_{LV}^2}F_{ij}\Delta^2 F^{ij}  +i\bar{\psi}\gamma^\mu D_\mu\psi - m\bar{\psi}\psi . 
+\end{equation}
+
+One may also consider similar LV terms in fermion Lagrangian, however, we omit them for the following reason. The study \cite{Liberati:2012jf} set the bound on LV mass scale for electron $M_{LV,\,e}$ at the level of $10^{16}\,\mbox{GeV}$ while the current limits \cite{Vasileiou:2013vra} on $M_{LV,\, \gamma}$  are of the order of $10^{11}\,\mbox{GeV}$. Thus, the photon dispersion relation is
+\begin{equation}
+\label{DispRelation}
+E^2 = p^2 \pm \frac{p^4}{M_{LV}^2}.
+\end{equation}
+Here we restrict ourselves only on superluminal photons --- sign "+" in (\ref{DispRelation}). Note that we keep CPT unbroken, so the dispersion relation (\ref{DispRelation}) is the same for both photon polarizations.
+
+\section{Photon decay}
+\label{Photon decay}
+The process of the photon decay 
+$\gamma \to e^+e^-$ in the presence of LV become allowed if the photon energy exceed a certain threshold. It can be simply referred to the "effective mass"  defined as 
+\be
+\label{mgamma}
+m^2_{\gamma,eff} \equiv E^2-p^2=\frac{p^4}{M_{LV}^2}\;.
+\ee 
+In this notations photon decays if its effective mass exceed the double electron mass, $m_{\gamma,eff} \geq 2m_e$. The products of the reaction, electron and positron, carry away almost a half of the initial photon momentum. Once being allowed, the photon decay process is
+very rapid\footnote{When $m_{\gamma,eff}\gg 2m_e$ the decay width is given
+by
+$\Gamma_{\gamma\to e^+e^-}=(\alpha\, p_\gamma^3)/(3 M_{LV,\gamma}^2)$,
+where $\alpha$ is the fine structure constant~\cite{Rubtsov:2012kb}.}. 
+This process leads to an extremely sharp cutoff in photon spectrum of observed
+astrophysical source. Thus, detection of even single 
+photon of astrophysical origin with an energy $E_\gamma$ sets the
+bound,
+\be
+\label{photondecaybound}
+M_{LV} > \frac{E_\gamma^2}{2m_e}\;.
+\ee
+ 
+
+The observation of highest-energy photons  from
+the Crab nebula~\cite{Martinez-Huerta:2016azo} provides the following the constraint
+\be
+\label{decayrecent}
+M_{LV,\gamma} > 2.8\times 10^{12}\,\mbox{GeV}.
+\ee
+
+
+
+
+\section{Photon splitting} 
+\label{The photon splitting}
+Photon decay is not the only reaction which decreases VHE photon flux. 
+In the case $m_{\gamma,\mathrm{eff}} < 2m_{e}$, reaction $\gamma \to e^+e^-$ is kinematically forbidden. However, a process of photon decay with more than two photons in the final state $\gamma \to \mbox{n}\gamma$, so-called photon splitting, is kinematically allowed whenever the photon dispersion relation is superluminal. In the context of LV, photon splitting was considered for QED with additional Chern-Simons term \cite{Adam:2002rg}, and for photon with cubic dispersion relation \cite{Gelmini:2005gy}. A study for the case of quartic dispersion relation for a photon seems to be absent in the literature to the best of our knowledge. 
+
+The leading order splitting process, $\gamma \to 2 \gamma$ does not occur if CPT is unbroken: fermion loop with odd number of propagators identically vanishes due to the Furry theorem, see a discussion   in~\cite{Liberati:2013xla}.
+
+Thus, the main  splitting process is the photon decay into 3 photons,  $\gamma \to 3\gamma$. In order to estimate the width of the reaction, we follow the lines of  \cite{Gelmini:2005gy}, where the similar estimates have been done for the case of cubic photon dispersion relation.
+
+The process of photon splitting has no threshold: it is kinematically allowed in case of superluminal LV. However, the rate of photon splitting is significantly less than the rate of photon decay because of very small phase volume for the products of the reaction. Analyzing energy-momentum conservation for photons with dispersion relation (\ref{DispRelation}), one obtains collinear kinematics. In particular, if three outgoing photons have similar energies, the deflection angle of one of outgoing photons from the axis of the initial photon momenta  is suppressed by LV mass scale $\varphi \propto p/M_{LV}$. If one outgoing photon carries away almost all of the initial photon energy, the emission angles tend to zero, as well as the phase volume. Thus, energetic photons decay to three less energetic ones, with energies almost one third of the energy of the initial one. This phenomenon may lead to cut-off of high-energy part of photon spectra. 
+
+%%%%%%%%%%%%%%%%% NEW CALCULATIONS
+%%%%%%%%%%%%%%%%%
+To obtain precise value for splitting width we carried out straightforward calculations in the laboratory frame. We divided 3-momenta of final photons to parallel $k_i^\parallel$ and perpendicular $k_i^\perp$ part (compared to initial photon 3-momenta). 3-momentum conservation gives: $\vec{k}_1^\perp + \vec{k}_2^\perp +\vec{k}_3^\perp = 0$ and $k_1^\parallel +k_2^\parallel + k_3^\parallel = k$. Parallel momenta $k_i^\parallel$ may be reduced to dimensionless variables $\alpha_i$:
+\begin{equation}
+k_i^\parallel = k\, \alpha_i, \qquad \qquad \alpha_1 + \alpha_2+\alpha_3=1.
+\end{equation}
+Perpendicular vectors are 2-vectors in a plane, perpendicular to the initial photon momentum $\vec{k}$. Each of them may be parametrized by module $k_i^\perp$ and polar angle $\varphi_i$; one of these angles -- $\varphi_3$ is integrated out with delta-function; another one decouples from the whole phase volume due to rotational symmetry; the only variable is $\varphi_2$. By simple geometric means, $k_3^\perp$ is written as follows:
+\begin{equation}
+(k_3^\perp)^2 = (k_1^\perp)^2 + (k_2^\perp)^2 + 2k_1^\perp k_2^\perp \cos \varphi_2.
+\end{equation} 
+
+We introduce dimensionless variables $\beta_1$, $\beta_2$:
+\begin{equation}
+k_1^\perp = \frac{k^2}{M_{LV}}\cdot \beta_1, \qquad \qquad  k_2^\perp = \frac{k^2}{M_{LV}}\cdot \beta_2.
+\end{equation}
+
+Decay width reads
+\begin{equation}
+\label{PhaseVolume_4}
+\Gamma = \frac{8\pi}{9}\frac{E_{\gamma}^4}{M_{LV}^2} \int \frac{d\alpha_1\, d\alpha_2\, d\beta_1 d\beta_2}{\alpha_1\alpha_2} \frac{1}{\left. \sin\varphi_2 \right|_{\varphi_2=\varphi_2(\beta_1,\beta_2,\alpha_1,\alpha_2)}} |\mathcal{M}|^2.
+\end{equation}
+Here $\mathcal{M}$ is the invariant matrix element 
+obtained from Euler-Heisenberg Lagrangian (obtained from~\label{L1} by integrating out fermion fields)
+\begin{equation}
+\mathcal{L}_{E\mbox{-}H}=\frac{2 \alpha^2}{45 m_e^4}
+\left[\left(\frac 12 F_{\mu\nu}F^{\mu\nu}\right)^2 
++7 \left(\frac 18 \epsilon^{\mu\nu\rho\sigma} 
+F_{\mu\nu}F_{\rho\sigma}\right)^2\right]~.
+\label{euler}
+\end{equation}
+by omitting the global factor 
+${2 \alpha^2}/({45 m_e^4})$.
+The area of integration over $(\beta_1,\; \beta_2)$ is determined by the condition: 
+$$
+-1<\cos\varphi_2 <1.
+$$
+The area of integration over $\alpha_1,\alpha_2$ is a triangle: $\alpha_1>0,\,\alpha_2>0,\, \alpha_1+\alpha_2<1$. 
+%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+Straightforward but complicated calculation reads (details will be provided soon ~\cite{ASK:2018}):
+%Preliminary result up to order of magnitude of $M_{LV}$ and $E_{\gamma}$ is consistent with rough estimate of the photon splitting which has been made in~\cite{Gelmini:2005gy} in a similar model with extra cubic term in the photon dispersion relation. However correct account of dimentionless phase volume led to extra miltiplication factor $10^3$, details will be provided soon ~\cite{ASK:2018}. 
+%The estimation \cite{Gelmini:2005gy} reads,
+\be\label{gammasplitting}
+\Gamma \l\gamma \to 3\gamma\r \simeq\; 1.5 \times 10^{-17}\,\frac{E_\gamma^{19}}{m_e^8 M_{LV}^{10}}.
+\ee 
+The result, up to a numerucal factor, is consistent with rough estimate\footnote{The calculation has been made in the artificial rest frame of massive photon, followed by subsequent boost back to the laboratory frame.} of the photon splitting which has been made in~\cite{Gelmini:2005gy} in a similar model with extra cubic term in the photon dispersion relation.  
+
+Inverting the width (\ref{gammasplitting}), one obtains the mean free path for the photon.
+\begin{align} \label{Distance_L}
+L  \l\gamma \to 3\gamma\r & \simeq 4 \cdot 10^{57} \cdot \left(\frac{M_{LV}}{M_{Pl}}\right)^{10}\, \l \frac{E_\gamma}{40\, \mbox{TeV}}\r^{-19}\  \mbox{kpc}\ \simeq  \notag \\
+& \simeq 2.5 \cdot 10^{-4}\cdot \left(\frac{M_{LV}}{10^{13}\,\mbox{GeV}}\right)^{10}\l \frac{E_\gamma}{40\, \mbox{TeV}}\r^{-19}\,\times \, L_{Crab}.
+\end{align}
+In the last line of (\ref{Distance_L}) we have normalized the mean free path $L$ to the distance to Crab nebula $L_{Crab} = 2\, \mbox{kpc}$. We have also normalized the photon energy to typical value of highest-energy detected photons -- $40$ TeV, and $M_{LV}$ to the scale $10^{13}$ GeV. We see that for $M_{LV}$ of this order high-energy photons even from galactic sources may be splitted during their propagation to Earth.  
+
+For a certain distance to the source $L_{source}$  there is a cut-off photon energy $E_{cut-off}$, determined by $L  \l\gamma \to 3\gamma\r \simeq L_{source}$: photons with larger energy lose energy via splitting; photons with significantly larger energy would be splitted several times. The detection of photon with energy $E_\gamma$ from the distance $L_{source}$ lead to the following bound on parameter $M_{LV}$:
+\be
+\label{Splitting General Bound}
+M_{LV} > \l \frac{E_\gamma}{40\,\mbox{TeV}}\r^{1.9} \, \l \frac{L_{source}}{L_{Crab}}\r^{0.1} \ \times \ 2.2 \cdot 10^{13} \,\mbox{GeV}.
+\ee
+This bound is applicable under the condition $m_{\gamma, \, eff} \ll m_e$, or
+\begin{equation}
+\label{condition}
+M_{LV} \, \gg \, \frac{E^2}{m_e} \; \simeq \; \left( \frac{E}{40\,\mbox{TeV}}\right)^2 \ \times \  3.2\cdot 10^{12}\,\mbox{GeV}\,.
+\end{equation}
+
+All photons with energy larger than $E_{cut-off}$ have to split until the final photons reach the cutoff energy $E_{cut-off}$. So, one may predicts an excess of photons at this energy. In fact, it may appear only if the photon spectrum of the source decreases with energy weaker than $\frac{d\Phi}{dE} \propto E^{-2}$. In opposite, VHE energy photon spectra of the majority of sources, decreases harder \cite{Aharonian:2004gb}, so the excess appears to be unobservable.
+
+\section{Numerical results}
+\label{Numerical results}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{hegra.pdf}
+\caption{\label{Fig1} Photon spectrum of the Crab nebula obtained by collaboration HEGRA\cite{Aharonian:2004gb}.  The dashed line corresponds to the best power-law fit of the spectrum while the dotted lines show the prediction for the flux under the hypothesis of Lorentz violation with a given $M_{LV}$. }
+\end{figure}
+
+Let us compare the bounds on $M_{LV}$ which may be obtained by observations of different astrophysical sources. As we see in formula (\ref{Splitting General Bound}), the bound on $M_{LV}$ depend strictly on photon energy, and weakly on the distance to the source. So, we take energetic ($80$ TeV)  photons, observed from Crab nebula \cite{Aharonian:2004gb} (the largest detected photon energy ever detected) --- quite close ($2$ kpc) galactic source; and photons with energies up to $20$ TeV from very distant  ($140$ Mpc) blazar Mrk 501 [CITE] (the largest detected photon energy from extragalactic source).  An estimations for Mrk 501 and Crab nebula leads, correspondingly:
+\begin{align}
+\label{Bound Mrk 501}
+20\, \mbox{TeV from Mrk}\, 501: \qquad  M_{LV} > 1.6 \cdot 10^{13}\,\mbox{GeV},\\
+\label{Bound Crab Estimation}
+80\, \mbox{TeV from Crab nebula}: \qquad M_{LV} > 8 \cdot 10^{13}\,\mbox{GeV}.
+\end{align}
+Both bounds satisfy the condition (\ref{condition}). The estimation for Crab nebula bound is the better one. Let us perform simple statistical analysis in order to make the bound (\ref{Bound Crab Estimation}) more precise. For this reason we analyze Crab data obtained by HEGRA \cite{Aharonian:2004gb}. The analysis is similar to made by \cite{Rubtsov:2016bea}.
+
+The photon may undergo to the splitting process at any point of the distance between the Crab and Earth. We suppose that if the photon split even once during its propagation, it is not detected in the same energy bin. The travelled photon distance $L$ is a random value with exponential distribution and the mean value $\langle L \rangle$. The probability for a photon to survive after a travel from Crab to the Earth is
+\begin{equation}
+\label{Probability}
+P(E) = \mbox{e}^{-L_{CRAB}/\langle L \rangle}.
+\end{equation}
+Let us stress that the mean value of $\langle L \rangle$ and hence the probability (\ref{Probability}) strictly depend on the initial photon energy $E$. Assuming hypothesis of LV with a certain $M_{LV}$ we expect that the observed differential Crab spectrum $d\Phi/dE$ would be multiplied to the factor (\ref{Probability}) and hence the high-energy part of it would be suppressed.
+
+The HEGRA Crab spectrum \cite{Aharonian:2004gb} with the best LI fit and the spectra under LV hypothesis is shown at Fig. 1. As it  seen at Fig. 1. Performing a likelihood analysis similar to \cite{Rubtsov:2016bea} based on the last experimental point ($E\approx 75\,\mbox{TeV}$) of \cite{Aharonian:2004gb}, we obtain the bound
+\begin{equation}
+\label{Bound HEGRA}
+M_{LV} > 5\cdot 10^{13}\,\mbox{GeV}, \qquad\qquad \mbox{at}\ 95\%\ \mbox{CL}.
+\end{equation}
+The bound (\ref{Bound HEGRA}) is on the order of magnitude better than the photon decay bound (\ref{decayrecent}). The condition for Euler-Heisenberg Lagrangian is satisfied automatically for this case.
+
+\section{Conclusion}
+\label{Conclusion}
+The bound on $M_{LV}$ from the absence of photon splitting (\ref{Bound HEGRA}) is better than from the absence of photon decay (\ref{photondecaybound}). Both these bounds refer to the case of superluminal LV (sign "+" in photon dispersion relation). Our bound (\ref{Bound HEGRA}), obtained from HEGRA Crab spectrum, is the best in the literature for this case.
+
+\paragraph*{Acknowledgments}
+We thank G.~Rubtsov and S. Sibiryakov for valuable discussions. The
+work was supported by the RSF Grant No. 14-22-00161.
+
+
+\begin{thebibliography}{99}
+
+%%%%%%%%%%%%%%%%%%%%%%5%% Introduction%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cite{Liberati:2013xla}
+\bibitem{Liberati:2013xla} 
+  S.~Liberati,
+  %``Tests of Lorentz invariance: a 2013 update,''
+  Class.\ Quant.\ Grav.\  {\bf 30}, 133001 (2013).
+%  [arXiv:1304.5795 [gr-qc]].
+  %%CITATION = ARXIV:1304.5795;%%
+
+%\cite{Colladay:1998fq}
+\bibitem{Colladay:1998fq}
+  D.~Colladay and V.~A.~Kostelecky,
+ %``Lorentz violating extension of the standard model,''
+  Phys.\ Rev.\ D {\bf 58} (1998) 116002.
+%  [hep-ph/9809521].
+  %%CITATION = HEP-PH/9809521;%%
+
+%\cite{Myers:2003fd}
+%\bibitem{Myers:2003fd}
+%  R.~C.~Myers and M.~Pospelov,
+  %``Ultraviolet modifications of dispersion relations in effective field theory,''
+ % Phys.\ Rev.\ Lett.\  {\bf 90} (2003) 211601    doi:10.1103/PhysRevLett.90.211601   [hep-ph/0301124].
+  %%CITATION = doi:10.1103/PhysRevLett.90.211601;%%
+  %331 citations counted in INSPIRE as of 13 Jul 2016
+
+%\cite{Kostelecky:2007fx}
+%\bibitem{Kostelecky:2007fx}
+ % V.~A.~Kostelecky and M.~Mewes,
+  %``Lorentz-violating electrodynamics and the cosmic microwave background,''
+%   Phys.\ Rev.\ Lett.\  {\bf 99} (2007) 011601   doi:10.1103/PhysRevLett.99.011601   [astro-ph/0702379 [ASTRO-PH]].
+  %%CITATION = doi:10.1103/PhysRevLett.99.011601;%%
+  %130 citations counted in INSPIRE as of 13 Jul 2016
+
+
+\bibitem{Coleman:1997xq} 
+  S.~R.~Coleman and S.~L.~Glashow,
+  %``Cosmic ray and neutrino tests of special relativity,''
+  Phys.\ Lett.\ B {\bf 405}, 249 (1997).
+%  [hep-ph/9703240].
+  %%CITATION = HEP-PH/9703240;%%
+  %362 citations counted in INSPIRE as of 20 Apr 2013
+
+%\cite{Kostelecky:2008ts}
+\bibitem{Kostelecky:2008ts}
+  V.~A.~Kostelecky and N.~Russell,
+  %``Data Tables for Lorentz and CPT Violation,''
+  Rev.\ Mod.\ Phys.\  {\bf 83} (2011) 11.
+%  [arXiv:0801.0287 [hep-ph]].
+  %%CITATION = ARXIV:0801.0287;%%
+
+
+
+
+%\cite{AbuZayyad:2012ru}
+%\bibitem{AbuZayyad:2012ru}
+%  T.~Abu-Zayyad {\it et al.} [Telescope Array Collaboration],
+  %``The Cosmic Ray Energy Spectrum Observed with the Surface Detector of the Telescope Array Experiment,''
+%   Astrophys.\ J.\ Lett {\bf 768} (2013) L1.
+%  arXiv:1205.5067 [astro-ph.HE].
+  %%CITATION = ARXIV:1205.5067;%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%\cite{Jacobson:2002hd}
+%\bibitem{Jacobson:2002hd} 
+ % T.~Jacobson, S.~Liberati and D.~Mattingly,
+  %``Threshold effects and Planck scale Lorentz violation: Combined constraints from high-energy astrophysics,''
+ % Phys.\ Rev.\ D {\bf 67}, 124011 (2003);
+%  [hep-ph/0209264];
+  %%CITATION = HEP-PH/0209264;%%
+
+%\cite{Jacobson:2005bg}
+%\bibitem{Jacobson:2005bg} 
+%  T.~Jacobson, S.~Liberati and D.~Mattingly,
+  %``Lorentz violation at high energy: Concepts, phenomena and astrophysical constraints,''
+ % Annals Phys.\  {\bf 321}, 150 (2006).
+%  [astro-ph/0505267].
+  %%CITATION = ASTRO-PH/0505267;%%
+
+
+
+%\cite{Colladay:2001wk}
+%\bibitem{Colladay:2001wk}
+ % D.~Colladay and V.~A.~Kostelecky,
+  %``Cross-sections and Lorentz violation,''
+%  Phys.\ Lett.\ B {\bf 511} (2001) 209    doi:10.1016/S0370-2693(01)00649-9   [hep-ph/0104300].
+  %%CITATION = doi:10.1016/S0370-2693(01)00649-9;%%
+  %160 citations counted in INSPIRE as of 13 Jul 2016
+
+
+%%%%%%%%%%%%%%%%%%%% END INTRODUCTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cite{Liberati:2012jf}
+\bibitem{Liberati:2012jf}
+ S.~Liberati, L.~Maccione and T.~P.~Sotiriou,
+  %``Scale hierarchy in Horava-Lifshitz gravity: a strong constraint from synchrotron radiation in the Crab nebula,''
+  Phys.\ Rev.\ Lett.\  {\bf 109} (2012) 151602
+  %%CITATION = doi:10.1103/PhysRevLett.109.151602;%%
+  %30 citations counted in INSPIRE as of 10 Feb 2017
+
+
+%\cite{Maccione:2007yc}
+%\bibitem{Maccione:2007yc} 
+%  L.~Maccione, S.~Liberati, A.~Celotti and J.~G.~Kirk,
+  %``New constraints on Planck-scale Lorentz Violation in QED from the Crab Nebula,''
+%  JCAP {\bf 0710}, 013 (2007).
+ % [arXiv:0707.2673 [astro-ph]].
+  %%CITATION = ARXIV:0707.2673;%%
+  %52 citations counted in INSPIRE as of 07 Mar 2014
+
+%\cite{Rubtsov:2012kb}
+\bibitem{Rubtsov:2012kb}
+  G.~Rubtsov, P.~Satunin and S.~Sibiryakov,
+  %``On calculation of cross sections in Lorentz violating theories,''
+  Phys.\ Rev.\ D {\bf 86} (2012) 085012
+  %%CITATION = doi:10.1103/PhysRevD.86.085012;%%
+  %12 citations counted in INSPIRE as of 15 Jun 2016
+
+
+%%%%%%%%%%%%%%%%%%%%% TIMING %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cite{Vasileiou:2013vra}
+\bibitem{Vasileiou:2013vra}
+  V.~Vasileiou {\it et al.},
+  %``Constraints on Lorentz Invariance Violation from Fermi-Large Area Telescope Observations of Gamma-Ray Bursts,''
+  Phys.\ Rev.\ D {\bf 87} (2013) no.12,  122001
+  %%CITATION = doi:10.1103/PhysRevD.87.122001;%%
+  %44 citations counted in INSPIRE as of 14 Jun 2016
+
+
+%%%%%%%%%%%%%%%%%%%%% PHOTON DECAY %%%%%%%%%%%%%%%%%%%%
+%\cite{Martinez-Huerta:2016azo}
+\bibitem{Martinez-Huerta:2016azo} 
+  H.~Martínez-Huerta and A.~Pérez-Lorenzana,
+  %``Restrictions from Lorentz invariance violation on cosmic ray propagation,''
+  Phys.\ Rev.\ D {\bf 95}, no. 6, 063001 (2017)
+  %%CITATION = doi:10.1103/PhysRevD.95.063001;%%
+  %8 citations counted in INSPIRE as of 21 Aug 2018
+
+
+
+%\cite{Gelmini:2005gy}
+\bibitem{Gelmini:2005gy}
+  G.~Gelmini, S.~Nussinov and C.~E.~Yaguna,
+  %``On photon splitting in theories with Lorentz invariance violation,''
+  JCAP {\bf 0506} (2005) 012
+  %%CITATION = doi:10.1088/1475-7516/2005/06/012;%%
+  %13 citations counted in INSPIRE as of 13 Jun 2016
+
+%\cite{ASK:2018}
+\bibitem{ASK:2018}
+	K.~Astapov, P.~Satunin and D.~Kirpichnikov, in preparation.	
+	
+
+%\cite{Aharonian:2004gb}
+\bibitem{Aharonian:2004gb}
+  F.~Aharonian {\it et al.} %[HEGRA Collaboration],
+  %``The Crab nebula and pulsar between 500-GeV and 80-TeV. Observations with the HEGRA stereoscopic air Cerenkov telescopes,''
+  Astrophys.\ J.\  {\bf 614} (2004) 897
+  %%CITATION = doi:10.1086/423931;%%
+  %182 citations counted in INSPIRE as of 13 Jun 2016	
+	
+%\cite{Aharonian:1999vy}
+\bibitem{Aharonian:1999vy}
+ F.~Aharonian {\it et al.},
+  %``The time averaged TeV energy spectrum of mkn 501 of the  %extraordinary 1997 outburst as measured with the stereoscopic   %Cherenkov telescope system of hegra,'' 
+  Astron.\ Astrophys.\  {\bf 349} (1999) 11  % [astro-ph/9903386].
+ %\\
+ % F.~Aharonian [HEGRA Collaboration],
+  %``Reanalysis of the high energy cutoff of the 1997 mkn 501 TeV
+  %energy spectrum,'' 
+ % Astron.\ Astrophys.\  {\bf 366} (2001) 62 %  doi:10.1051/0004-6361:20000098
+ % [astro-ph/0011483].	
+
+%\cite{Rubtsov:2016bea}
+\bibitem{Rubtsov:2016bea} 
+  G.~Rubtsov, P.~Satunin and S.~Sibiryakov,
+  %``Constraints on violation of Lorentz invariance from atmospheric showers initiated by multi-TeV photons,''
+  JCAP {\bf 1705}, 049 (2017)
+  %%CITATION = doi:10.1088/1475-7516/2017/05/049;%%
+  %12 citations counted in INSPIRE as of 21 Aug 2018
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,265 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\hbadness 10000
+\topmargin -27pt
+
+\evensidemargin 0.00in
+\oddsidemargin 0.00in
+\textwidth 6.5in
+\textheight 8.5in
+%\usepackage{feynmp,slashed}
+\usepackage{amssymb,graphicx}
+%\usepackage{graphics}
+\usepackage{amsmath,amsfonts}
+\usepackage{fullpage}
+
+
+\def\const{\mbox{const}}
+\def\l{\left(}
+\def\r{\right)}
+\def\la{\langle }
+\def\ra{\rangle }
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+%\newcommand{\tg}{\mathop{\rm tg}\nolimits}
+\renewcommand{\tanh}{\mathop{\rm th}\nolimits}
+%\newcommand{\ch}{\mathop{\rm ch}\nolimits}
+\renewcommand{\ln}{\mathop{\rm ln}\nolimits}
+
+\newcommand{\Tr}{{\rm Tr}}
+\def\half{\frac{1}{2}}
+\newcommand{\eq}[1]{(\ref{#1})}
+
+
+
+
+
+\title{Matrix Element for photon splitting in LV QED}
+\author{Authors}
+\begin{document}
+\maketitle
+
+
+\section{Introduction}
+\label{intro}
+
+Lorentz invariance (LI) is the one of fundamental laws of Nature. However, in several theoretical models it can be broken. These models are mostly motivated by different approaches to construct quantum theory of gravity (see review \cite{Liberati:2013xla} and references therein). The common approach is to consider Lorentz invariance violation (LV) in matter sector is the framework of effective field theory (EFT) \cite{Colladay:1998fq}.  
+
+One of the differences between models with LV and LI ones is modification of particle reactions. In presence of hypothetical LV some processes forbidden in LI models may be allowed. The well-known examples are photon decay to an electron-positron pair $\gamma \to e^+e^-$ and vacuum Cerenkov radiation $e^-\to e^-\gamma$ \cite{Coleman:1997xq}. Cross-sections of other processes may be modified as well. The absence of experimental observations of such effects constrain LV. Due to these processes a hypothesys of a certain type of LV may be experimentally tested. Experimental bounds are gathered in data tables \cite{Kostelecky:2008ts}.
+
+\section{The model}
+\label{The model}
+Reactions studying in the scope of present work involve LV in photon sector of SM then the Lagrangian of the model is the QED part of SM Lagrangian with an additional LV term, quartic on space derivatives for a photon and suppressed by the second power of LV mass scale $M_{LV}$.
+\begin{equation}\label{L1}
+\mathcal{L}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}  \mp \frac{1}{2 M_{LV}^2}F_{ij}\Delta^2 F^{ij}  +i\bar{\psi}\gamma^\mu D_\mu\psi - m\bar{\psi}\psi . 
+\end{equation}
+
+One may also consider similar LV terms in fermion Lagrangian, however, we omit them for the following reason. The study \cite{Liberati:2012jf} set the bound on LV mass scale for electron $M_{LV,\,e}$ at the level of $10^{16}\,\mbox{GeV}$ while the current limits \cite{Vasileiou:2013vra} on $M_{LV,\, \gamma}$  are of the order of $10^{11}\,\mbox{GeV}$. Thus, the photon dispersion relation is
+\begin{equation}
+\label{DispRelation}
+E^2 = p^2 \pm \frac{p^4}{M_{LV}^2}.
+\end{equation}
+Here we restrict ourselves only on superluminal photons --- sign "+" in (\ref{DispRelation}). Note that we keep CPT unbroken, so the dispersion relation (\ref{DispRelation}) is the same for both photon polarizations.
+
+
+The process of the photon decay 
+$\gamma \to e^+e^-$ in the presence of LV become allowed if the photon energy exceed a certain threshold. It can be simply referred to the "effective mass"  defined as 
+\be
+\label{mgamma}
+m^2_{\gamma,eff} \equiv E^2-p^2=\frac{p^4}{M_{LV}^2}\;.
+\ee 
+In this notations photon decays if its effective mass exceed the double electron mass, $m_{\gamma,eff} \geq 2m_e$. The products of the reaction, electron and positron, carry away almost a half of the initial photon momentum. Once being allowed, the photon decay process is
+very rapid\footnote{When $m_{\gamma,eff}\gg 2m_e$ the decay width is given
+by
+$\Gamma_{\gamma\to e^+e^-}=(\alpha\, p_\gamma^3)/(3 M_{LV,\gamma}^2)$,
+where $\alpha$ is the fine structure constant~\cite{Rubtsov:2012kb}.}. 
+This process leads to an extremely sharp cutoff in photon spectrum of observed
+astrophysical source. Thus, detection of even single 
+photon of astrophysical origin with an energy $E_\gamma$ sets the
+bound,
+\be
+\label{photondecaybound}
+M_{LV} > \frac{E_\gamma^2}{2m_e}\;.
+\ee
+ 
+
+The observation of highest-energy photons  from
+the Crab nebula~\cite{Martinez-Huerta:2016azo} provides the following the constraint
+\be
+\label{decayrecent}
+M_{LV,\gamma} > 2.8\times 10^{12}\,\mbox{GeV}.
+\ee
+
+
+
+
+\section{Matrix element}
+We use Euler-Heisenberg Lagrangian
+\begin{equation}
+\mathcal{L}_{E\mbox{-}H}=\frac{2 \alpha^2}{45 m_e^4}
+\left[\left(\frac 12 F_{\mu\nu}F^{\mu\nu}\right)^2
++7 \left(\frac 18 \epsilon^{\mu\nu\rho\sigma}
+F_{\mu\nu}F_{\rho\sigma}\right)^2\right]~.
+\label{euler}
+\end{equation}
+In comparison with Lorentz Invariant case, there are two differences in Matrix Element: nonzero squared photon momenta and modified polarization sums. The first modification is technically easy while the second seems to be more difficult to solve in FeynCalc.
+
+In order to solve this issue we apply the following technique:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%   HERE!!!
+The Feynman rules for the relevant vertices are extracted from (\ref{euler}) in a way, the lowest order matrix element for a four-photon process can then be written as
+   \begin{equation}
+        M = M_{\mu\nu\rho\lambda}(k_1,k_2,k_3,k_4) \varepsilon_\mu(k_1) \varepsilon_\nu (k_2)\varepsilon_\rho(k_3) \varepsilon_\lambda(k_4)
+    \end{equation}
+where $k_i$ are the photon four-momenta, and $\varepsilon(k)$ are the corresponding polarization
+vectors.    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+For convenience of further calculations let us introduce tensors
+\begin{equation}
+    T_{\mu\nu}(k,p) = 2 (pk)g_{\mu\nu} - 2 p_\mu k_\nu
+\end{equation}
+and
+\begin{equation}
+    T^{dual}_{\mu\nu}(k,p) = - 4 k^\pho p^\lambda \varepsilon^{\mu\nu\rho\lambda}
+\end{equation}
+Then performing summation over all permutations of on-shell photons obtain following
+\begin{equation}
+  M^1_{\lambda_1\lambda_2\lambda_3\lambda_4}=8(T_{\lambda_1\lambda_2}(k_1,k_2)T_{\lambda_3\lambda_4}(k_3,k_4) + T_{\lambda_1\lambda_3}(k_1,k_3)T_{\lambda_2\lambda_4}(k_2,k_4) + T_{\lambda_1\lambda_4}(k_1,k_4)T_{\lambda_3\lambda_2}(k_3,k_2) )
+\end{equation}
+and
+\begin{equation}
+  M^{dual}_{\lambda_1\lambda_2\lambda_3\lambda_4}=8(T^{dual}_{\lambda_1\lambda_2}(k_1,k_2)T^{dual}_{\lambda_3\lambda_4}(k_3,k_4) + T^{dual}_{\lambda_1\lambda_3}(k_1,k_3)T^{dual}_{\lambda_2\lambda_4}(k_2,k_4) + T^{dual}_{\lambda_1\lambda_4}(k_1,k_4)T^{dual}_{\lambda_3\lambda_2}(k_3,k_2) ).
+\end{equation}
+Unify both parts
+\begin{equation}
+  M_{\lambda_1\lambda_2\lambda_3\lambda_4}=  M^1_{\lambda_1\lambda_2\lambda_3\lambda_4} + \frac{7}{16} M^{dual}_{\lambda_1\lambda_2\lambda_3\lambda_4}
+\end{equation}
+Finally for squared matrix element
+    \begin{equation}
+        M^*M =  M^*_{\mu_1\nu_1\rho_1\lambda_1} M_{\mu\nu\rho\lambda}\; \varepsilon_\mu_1(k_1)\varepsilon_\mu(k_1) \;\varepsilon_\nu_1 (k_2) \varepsilon_\nu (k_2)\;\varepsilon_\rho_1(k_3)\varepsilon_\rho(k_3) \; \varepsilon_\lambda_1(k_4)\varepsilon_\lambda(k_4)
+    \label{MatrixElement}    
+    \end{equation}
+The amplitude for for photon scattering $\gamma\gamma \to \gamma\gamma$ in LI theory agrees with the result in Schwartz book (p.717-718) (in Mandelstam variables)
+
+In LV theory polarization sum have following form
+\begin{equation}
+     \varepsilon_\mu_1(k) \varepsilon_\mu(k) = -g_{\mu \mu_1}- \frac{k_0^2}{M^2} u_{\mu} u_{\mu_1}
+\end{equation}
+
+Thus, for LV matrix element we obtain 16 terms like (\ref{MatrixElement}) where each $g_{\mu}g_{\nu}$ may be changed to $u_\mu u_\nu$ or not
+
+In MatrixElement.nb file we calculated two such terms at this moment
+
+
+
+
+\section{Phase volume}
+%%%%%%%%%%%%%%%%%%%%% Phase volume
+We consider the photon with 4-momentum $k$ which splits to 3 photons with 4-momenta $k_1, k_2, k_3$. We divide 3-momenta of final photons to parallel $k_i^\parallel$ and perpendicular $k_i^\perp$ part (compared to initial photon 3-momenta). 3-momentum conservation gives: $\vec{k}_1^\perp + \vec{k}_2^\perp +\vec{k}_3^\perp = 0$ and $k_1^\parallel +k_2^\parallel + k_3^\parallel = k$. Parallel momenta $k_i^\parallel$ may be reduced to dimensionless variables $\alpha_i$:
+\begin{equation}
+k_i^\parallel = k\, \alpha_i, \qquad \qquad \alpha_1 + \alpha_2+\alpha_3=1.
+\end{equation}
+Perpendicular vectors are 2-vectors in a plane, perpendicular to the initial photon momentum $\vec{k}$. Each of them may be parametrized by module $k_i^\perp$ and polar angle $\varphi_i$; one of these angles (say, $\varphi_3$) is solved due to delta-function; another one decouples from the whole phase volume due to rotational symmetry; the only variable is $\varphi_2$. By simple geometric means, $k_3^\perp$ is written as follows:
+\begin{equation}
+(k_3^\perp)^2 = (k_1^\perp)^2 + (k_2^\perp)^2 + 2k_1^\perp k_2^\perp \cos \varphi_2.
+\end{equation}  
+
+Let us describe the phase volume in the general way (for simplicity we omit $2\pi$ factors which I don't remember):
+\begin{equation}
+\label{PhaseVolume_1}
+\Phi = \int \frac{d^3k_1 d^3k_2 d^3k_3}{E_1 E_2 E_3} \delta(E-E_1-E_2-E_3)\delta^{(3)}\left( \vec{k} -\vec{k}_1-\vec{k}_2 - \vec{k}_3\right) |M|^2,
+\end{equation}
+and consider aforementioned kinematic configuration. We neglect contribution from LV in denominator, $E_1\,E_2\,E_3 = k_1\,k_1\,k_3 = k^3 \alpha_1\alpha_2(1-\alpha_1-\alpha_2)$. We integrate out 3-momentum $k_3$ solving delta-function so the phase volume (\ref{PhaseVolume_1}) goes to
+\begin{equation}
+\label{PhaseVolume_2}
+\Phi = \frac{1}{k}\int \frac{d\alpha_1\, d\alpha_2\, d^2k_1^\perp d^2k_2^\perp}{\alpha_1\alpha_2(1-\alpha_1-\alpha_2)} \delta(E-E_1-E_2-E_3) |M|^2.
+\end{equation}
+
+In order to go further we make some simplifications. We say that $(k_i^\perp/k)^2$ and $k^2/M^2$ are of the same order of smallness. Thus,
+\begin{equation}
+\label{E12}
+E_i = k\,\alpha_i + \frac{1}{2k}\frac{\left(k_i^\perp\right)^2}{\alpha_i} + \frac{k^3\alpha_i^3}{2\cdot M^2}, \qquad i=1,2
+\end{equation}
+\begin{equation}
+\label{E3}
+E_{3} = k\,(1-\alpha_1 - \alpha_2) + \frac{1}{2k}\frac{\left(k_{3}^\perp\right)^2}{1-\alpha_1 - \alpha_2} + \frac{k^3(1-\alpha_1 - \alpha_2)^3}{2\cdot M^2},
+\end{equation}
+These expressions may be substituted to the delta-function.
+
+The sum of energies is expressed as
+\begin{align}
+E_1 + E_2 + E_3 = k + \frac{k^3}{2M^2}\left(1 - 3(\alpha_1+\alpha_2)+3(\alpha_1+\alpha_2)^2-3\alpha_1\alpha_2(\alpha_1+\alpha_2) \right)+\\
++ \frac{1}{2k}\left( \frac{(k_1^\perp)^2}{\alpha_1} + \frac{(k_2^\perp)^2}{\alpha_2} + \frac{(k_1^\perp)^2+(k_2^\perp)^2+2k_1^\perp k_2^\perp \cos \varphi_2}{1-\alpha_1-\alpha_2} \right).
+\end{align}
+
+We introduce dimensionless variables $\beta_1$, $\beta_2$:
+\begin{equation}
+k_1^\perp = \frac{k^2}{M}\cdot \beta_1, \qquad \qquad  k_2^\perp = \frac{k^2}{M}\cdot \beta_2.
+\end{equation}
+
+In these variables eq (\ref{E12}) becomes
+\begin{equation}
+    E_i=k\left( \alpha_i + \frac{k^2}{2M^2} \alpha^3_i +  \frac{k^2}{2M^2} \frac{\beta^2_i}{\alpha_i}\right), i=1,2
+\end{equation}
+
+ 
+The inner part of delta-function ($E_1+E_2+E_3-E$) become
+\begin{equation}
+   \frac{k^3}{2M^2} \left( 3(\alpha_1+\alpha_2)(1-\alpha_1-\alpha_2 + \alpha_1\alpha_2) + \frac{1}{1-\alpha_1-\alpha_2}\left( \frac{1-\alpha_2}{\alpha_1}\beta_1^2 + \frac{1-\alpha_1}{\alpha_2}\beta_2^2 + 2\beta_1 \beta_2 \cos \varphi_2 \right) \right)   
+\end{equation}
+
+The phase volume (\ref{PhaseVolume_2}) become
+\begin{equation}
+\label{PhaseVolume_3}
+\Phi = \frac{2\pi}{k}\left( \frac{k^2}{M}\right)^4 \int \frac{d\alpha_1\, d\alpha_2\, d\varphi_2 d(\beta_1^2) d(\beta_2^2)}{\alpha_1\alpha_2(1-\alpha_1-\alpha_2)} \delta\left[ ...\right] |M|^2.
+\end{equation}
+We take integral over $\varphi_2$ solving delta-function. We obtain $\frac{k^3}{2M^2}\frac{2\beta_1\beta_2}{1-\alpha_1\alpha_2}\sin\varphi_2$ in the denominator. $\varphi_2$ is expressed as
+\begin{equation}
+\label{cos_phi_2}
+\cos \varphi_2=\frac{3(\alpha_1+\alpha_2)(1-\alpha_1-\alpha_2)(1-\alpha_1-\alpha_2 + \alpha_1\alpha_2) -\frac{1-\alpha_2}{\alpha_1}\beta_1^2 - \frac{1-\alpha_1}{\alpha_2}\beta_2^2  }{2\beta_1\beta_2}
+\end{equation}
+Phase volume:
+\begin{equation}
+\label{PhaseVolume_4}
+\Phi = 2\pi\frac{k^4}{M^2} \int \frac{d\alpha_1\, d\alpha_2\, d\beta_1 d\beta_2}{\alpha_1\alpha_2} \frac{1}{\left. \sin\varphi_2 \right|_{podstanovka}} |M|^2.
+\end{equation}
+
+The area of integration over $(\beta_1,\; \beta_2)$ is determined by the condition: 
+$$
+-1<\cos\varphi_2 <1.
+$$
+It is an area between two ellipses (see Fig.1) depending on $\alpha_1,\alpha_2$.  
+\begin{figure}
+\centering
+\includegraphics[width=10cm]{split.pdf}
+\caption{The area of integration over $(\beta_1,\beta_2)$ is between two ellipses for the symmetric case $\alpha_1=\alpha_2=0.33$}
+\end{figure}
+
+Integration in (\ref{PhaseVolume_4}) may be done first over $(\beta_1,\; \beta_2)$ and after over $\alpha_1,\alpha_2$. The area of integration over $\alpha_1,\alpha_2$ is a triangle: $\alpha_1>0,\,\alpha_2>0,\, \alpha_1+\alpha_2<1$. 
+
+First, we integrate over $(\beta_1,\; \beta_2)$ for different values of fixed $\alpha_1,\,\alpha_2$ (see file calcs3.nb). Phase volume is maximal at  the symmetric configuration $\alpha_1=\alpha_2=0.33$.
+
+\begin{figure}
+\centering
+\includegraphics[width=10cm]{split3d.pdf}
+\caption{The phase volume integrated over perpendicular momenta $(\beta_1,\; \beta_2)$, as the function of longitudial momenta $(\alpha_1,\alpha_2)$. The peak is on the symmetric configuration $\alpha_1=\alpha_2=0.33$ }
+\end{figure}
+
+The next step is inegration over longitudial momenta. Integration over $\alpha_2$ with fixed $\alpha_1$ (or vice versa, it must be the same) gives us energy losses. Integral over both $\alpha_1,\alpha_2$ gives the splitting width.
+
+\section{Scalar Products}
+\begin{equation}
+    (k\, k_i)= \frac{k^4}{2M^2}\left( \alpha_i + \alpha_i^3 + \beta^2_i/\alpha_i \right), \ i=1,2
+\end{equation}
+\begin{equation}
+    (k_1\, k_2)= \frac{k^4}{2M^2}\left( \alpha_1\alpha_2(\alpha_1^2+\alpha_2^2) - 3(\alpha_1+\alpha_2)(1-\alpha_1-\alpha_2)(1-\alpha_1-\alpha_2 + \alpha_1\alpha_2) +\frac{\beta_1^2}{\alpha_1} + \frac{\beta_2^2}{\alpha_2} \right)
+\end{equation}
+
+
+\end{document}
