@@ -37,11 +37,18 @@
 
 
 
-\title{Matrix Element for photon splitting in LV QED}
-\author{Authors}
+\title{On photon splitting in LV QED}
+\author{Konstantin Astapov$^1$, Dmitry Kirpichnikov$^1$,  Petr Satunin$^1$\thanks{{\bf e-mail}: satunin@ms2.inr.ac.ru}
+\vspace{.2cm}\\
+\normalsize\it $^1$ Institute for Nuclear Research of the Russian Academy
+of Sciences, \\  
+\normalsize \it  60th October Anniversary Prospect, 7a, 117312  Moscow, Russia} 
 \begin{document}
 \maketitle
 
+\begin{abstract}
+We calculate the width of the process of photon splitting to three photons in a simple model of quantum electrodynamics with broken Lorentz invariance. We show that this process may lead to a cut-off in very-high-energy part of astrophysical sources photon spectra. We obtain 95\% CL bound on Lorentz violating mass scale for photons from the analysis of very-high-energy part Crab Nebula spectrum, obtained by HEGRA. 
+\end{abstract}
 
 \section{Introduction}
 \label{intro}
@@ -50,83 +57,121 @@ Lorentz invariance (LI) is the one of fundamental laws of Nature. However, in se
 
 One of the differences between models with LV and LI ones is modification of particle reactions. In presence of hypothetical LV some processes forbidden in LI models may be allowed. The well-known examples are photon decay to an electron-positron pair $\gamma \to e^+e^-$ and vacuum Cerenkov radiation $e^-\to e^-\gamma$ \cite{Coleman:1997xq}. Cross-sections of other processes may be modified as well. The absence of experimental observations of such effects constrain LV. Due to these processes a hypothesys of a certain type of LV may be experimentally tested. Experimental bounds are gathered in data tables \cite{Kostelecky:2008ts}.
 
-\section{The model}
-\label{The model}
-Reactions studying in the scope of present work involve LV in photon sector of SM then the Lagrangian of the model is the QED part of SM Lagrangian with an additional LV term, quartic on space derivatives for a photon and suppressed by the second power of LV mass scale $M_{LV}$.
+\section{The model.}
+
+The model is the standard QED with an addition of extra LV term, quartic on space derivatives, for a photon, quartic on space derivative for photon and suppressed by the second power of LV mass scale $M_{LV}$.
 \begin{equation}\label{L1}
 \mathcal{L}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}  \mp \frac{1}{2 M_{LV}^2}F_{ij}\Delta^2 F^{ij}  +i\bar{\psi}\gamma^\mu D_\mu\psi - m\bar{\psi}\psi . 
 \end{equation}
 
-One may also consider similar LV terms in fermion Lagrangian, however, we omit them for the following reason. The study \cite{Liberati:2012jf} set the bound on LV mass scale for electron $M_{LV,\,e}$ at the level of $10^{16}\,\mbox{GeV}$ while the current limits \cite{Vasileiou:2013vra} on $M_{LV,\, \gamma}$  are of the order of $10^{11}\,\mbox{GeV}$. Thus, the photon dispersion relation is
+One may also consider similar LV terms in fermion Lagrangian. However, we will skip them for the following reason. The study \cite{Liberati:2012jf} set the bound on LV mass scale for electron $M_{LV,\,e}$ at the level of $10^{16}\,\mbox{GeV}$ while the current limits \cite{Vasileiou:2013vra} on this value are of the order of $10^{11}\,\mbox{GeV}$. Thus, the photon dispersion relation is
 \begin{equation}
 \label{DispRelation}
 E^2 = p^2 \pm \frac{p^4}{M_{LV}^2}.
 \end{equation}
-Here we restrict ourselves only on superluminal photons --- sign "+" in (\ref{DispRelation}). Note that we keep CPT unbroken, so the dispersion relation (\ref{DispRelation}) is the same for both photon polarizations.
+In the paper we restrict ourselves only on superluminal photons --- sign "+" in (\ref{DispRelation}). Note that we keep CPT unbroken, so the dispersion relation (\ref{DispRelation}) is the same for both photon polarizations.
 
+Modified Feynman rules for the model (\ref{L1}) (and more general) are gathered in \cite{Rubtsov:2012kb}. In particular, polarization sums for photons are
+\begin{equation}
+\label{polarizationsums}
+\varepsilon_\mu^*(k)\varepsilon_\nu(k) = -g_{\mu\nu} - \frac{k_0^2}{M_{LV}^2}u_\mu u_\nu,
+\end{equation}
+where $u_\mu=(1,0,0,0)$ is timelike 4-vector.
 
-The process of the photon decay 
-$\gamma \to e^+e^-$ in the presence of LV become allowed if the photon energy exceed a certain threshold. It can be simply referred to the "effective mass"  defined as 
-\be
+\section{The bound from the absence of photon decay}
+
+In the presence of LV kinematics of some reactions modifies.  The process of the photon decay 
+$\gamma \to e^+e^-$, forbidden in the presence of LI, become allowed if the photon energy exceed a certain threshold. It can be simply illustrated in the language of "effective masses", defined as 
+\begin{equation}
 \label{mgamma}
 m^2_{\gamma,eff} \equiv E^2-p^2=\frac{p^4}{M_{LV}^2}\;.
-\ee 
-In this notations photon decays if its effective mass exceed the double electron mass, $m_{\gamma,eff} \geq 2m_e$. The products of the reaction, electron and positron, carry away almost a half of the initial photon momentum. Once being allowed, the photon decay process is
+\end{equation}
+In this notations photon decays if its effective mass exceed the double electron mass, $m_{\gamma,eff} \geq 2m_e$. The products of the reaction, electron and positron, bring approximately a half of the initial photon momentum. Once being allowed, the photon decay process is
 very rapid\footnote{When $m_{\gamma,eff}\gg 2m_e$ the decay width is given
 by
 $\Gamma_{\gamma\to e^+e^-}=(\alpha\, p_\gamma^3)/(3 M_{LV,\gamma}^2)$,
 where $\alpha$ is the fine structure constant~\cite{Rubtsov:2012kb}.}. 
-This process leads to an extremely sharp cutoff in photon spectrum of observed
-astrophysical source. Thus, detection of even single 
-photon of astrophysical origin with an energy $E_\gamma$ sets the
+This process leads to an extremely sharp cutoff in photon spectrum from any
+astrophysical source. Thus, an observation of even single 
+photon event of astrophysical origin with an energy $E_\gamma$ gives the
 bound,
-\be
+\begin{equation}
 \label{photondecaybound}
 M_{LV} > \frac{E_\gamma^2}{2m_e}\;.
-\ee
- 
-
-The observation of highest-energy photons  from
-the Crab nebula~\cite{Martinez-Huerta:2016azo} provides the following the constraint
-\be
+\end{equation}
+%Statistical significance of the bound (\ref{photondecaybound}) is
+%equal to the significance of the photon detection with a certain
+%energy. 
+The recent analysis~\cite{Martinez-Huerta:2016azo} 
+using the highest-energy photons observed from
+the Crab nebula sets the constraint,
+\begin{equation}
 \label{decayrecent}
 M_{LV,\gamma} > 2.8\times 10^{12}\,\mbox{GeV}.
-\ee
+\end{equation}
+However, it is not only reaction which decrease VHE photon flux. 
 
+%Even if the photon decay into $e^+e^-$ is kinematically forbidden, the flux from astrophysical sources can be depleted by photon splitting $\gamma\to n\,\gamma$. This process is kinematically allowed whenever the photon dispersion relation is superluminal. Splitting into 3 photons\footnote{The width of splitting into 2 photons $\gamma\to\gamma\gamma$   is generally expected to be more suppressed by additional powers of   the LV scale as in the limit of LI QED the matrix element with an   odd number of external photon legs identically vanishes (this is the   statement of the Furry theorem), see a discussion   in~\cite{Liberati:2013xla}.} $\gamma\to 3\gamma$ was analyzed in~\cite{Gelmini:2005gy} for the case of cubic corrections to the photon dispersion relation and the width of this process was found to strongly depend on energy and the LV scale. Thus, observations of multi-TeV photons of astrophysical origin put restrictive bounds on the latter. However, a study for the case of quartic dispersion relation is missing in the literature. We leave the derivation of the corresponding bounds for future. 
 
+\section{The photon splitting.} 
 
+In the case $m_{\gamma,\mathrm{eff}} < 2m_{e}$, the photon decay $\gamma \to e^+e^-$ is kinematically forbidden. However, a process of photon decay with several photons in the final state $\gamma \to \mbox{n}\gamma$, so-called photon splitting, is kinematically allowed whenever the photon dispersion relation is superluminal. In the context of LV, photon splitting was considered for QED with additional Chern-Simons term \cite{Adam:2002rg}, and for photon with cubic dispersion relation \cite{Gelmini:2005gy}. A study for the case of quartic dispersion relation for a photon seems to be missed in the literature. 
 
-\section{Matrix element}
-We use Euler-Heisenberg Lagrangian
+The leading order splitting process, photon splitting to two photons $\gamma \to 2 \gamma$ do not occur if CPT is unbroken: fermion loop with odd number of propagators identically vanishes due to the Furry theorem (which violates if electrons are CPT-violated), see a discussion   in~\cite{Liberati:2013xla}.
+
+Thus, the main  splitting process is the photon decay to 3 photons  $\gamma \to 3\gamma$. In order to estimate the width of the reaction, we follow the lines of  \cite{Gelmini:2005gy}, there the similar estimates have been done for the case of cubic photon dispersion relation.
+
+%The process of photon splitting has no threshold: it is kinematically allowed in case of superluminal LV. However, the rate of photon splitting is significantly less than the rate of photon decay. The main reason is a really small phase volume for the products of the reaction. Analyzing energy-momentum conservation for photons with dispersion relation (\ref{DispRelation}), one obtains collinear kinematics. If three outgoing photons have similar energies, the angle of the direction of ingoing photon momentum and of one outgoings is suppressed by LV mass scale $\varphi \propto p/M_{LV}$. If one of outgoing photons brings almost all initial energy, the angles go to zero, as well as the phase volume. Thus, energetic photons decay to three less energetic ones, with energies almost one third of the energy of the initial one. This phenomenon may lead to cut-off of high-energy part of photon spectra. 
+
+Let us first follow the lines of \cite{Gelmini:2005gy} and obtain the similar estimasions for quartic dispersion relation (\ref{DispRelation}) as was made for cubic dispersion relation in \cite{Gelmini:2005gy}. The authors made the following trick: they consider the effective mass for incoming photon via (\ref{mgamma}), make a boost into artificial ``rest frame'' of massive photon (there outcoming photons are considered to be massless), make estimations into the  ``rest frame'', and make a  boost back to laboratory frame.
+
+For calculations of the matrix element the authors used Euler-Heisenberg Lagrangian
+%The width of photon splitting has been estimated by \cite{Gelmini:2005gy} in a similar model with extra cubic term in the photon dispersion relation. The authors used the notation of effective masses. The calculation has been made in the artificial rest frame of massive photon, followed by subsequent boost back to laboratory frame. The authors used Euler-Heisenberg Lagrangian
 \begin{equation}
 \mathcal{L}_{E\mbox{-}H}=\frac{2 \alpha^2}{45 m_e^4}
-\left[\left(\frac 12 F_{\mu\nu}F^{\mu\nu}\right)^2
-+7 \left(\frac 18 \epsilon^{\mu\nu\rho\sigma}
+\left[\left(\frac 12 F_{\mu\nu}F^{\mu\nu}\right)^2 
++7 \left(\frac 18 \epsilon^{\mu\nu\rho\sigma} 
 F_{\mu\nu}F_{\rho\sigma}\right)^2\right]~.
 \label{euler}
 \end{equation}
-In comparison with Lorentz Invariant case, there are two differences in Matrix Element: nonzero squared photon momenta and modified polarization sums. The first modification is technically easy while the second seems to be more difficult to solve in FeynCalc.
+for calculation, which is applicable in the limit $m_{\gamma, eff} \ll m_e$ -- far from the threshold of photon decay. The calculation \cite{Gelmini:2005gy} reads,
+\be\label{gammasplitting}
+\Gamma \l\gamma \to 3\gamma\r \simeq \left( \frac{2\alpha^2}{45}\right)^2\frac{1}{3! 2^{11}\pi^9}\;\frac{m_{\gamma, eff}^{10}}{m_e^8 \, E_\gamma} \times f \;\simeq\; 1.5 \times 10^{-20}\,\frac{E_\gamma^{19}}{m_e^8 M_{LV}^{10}} \times f.
+\ee 
+Here $f$ denotes dimensionless phase volume in the ``rest frame'' of the initial photon. 
+\begin{equation}
+f=\frac{4 \pi^4}{m_\gamma^9}\int 
+\frac{d^3k_1\,d^3k_2\,d^3k_3}{E_1E_2E_3}
+\delta^4(p_\gamma-k_1-k_2-k_3)\left|\mathcal{M}\right|^2,
+\end{equation}
+ and  $\mathcal{M}$ is the invariant matrix element 
+obtained from Eq.(\ref{euler}) by omitting the global factor 
+${2 \alpha^2}/({45 m_e^4})$.
+By physical considerations, it should be of the order of unity. In the work \cite{Adam:2002rg} for different model direct calculations leads $f=0.2$. Inverting the width (\ref{gammasplitting}), one obtains an estimation the mean free path for the photon.
+\begin{align} \label{Distance_L}
+L  \l\gamma \to 3\gamma\r \simeq 0.5 \cdot f^{-1}\cdot \left(\frac{M_{LV}}{10^{13}\,\mbox{GeV}}\right)^{10}\l \frac{E_\gamma}{40\, \mbox{TeV}}\r^{-19}\,\mbox{kpc}.
+\end{align}
+We have  normalized the photon energy to typical value of highest-energy detected photons -- $40$ TeV, and $M_{LV}$ to the scale $10^{13}$ GeV. We see that for $M_{LV}$ of this order high-energy photons even from galactic sources (distances of the order of several $kpc$) may be splitted during their propagation to Earth, so observations of $40$ TeV and more energetic photons may set a bound on $M_{LV}$ of the order of $10^{13}$ GeV. This value is several times larger than the bound from the absense of the photon decay (\ref{decayrecent}) and so the splitting process is very relevant for setting actual constraint. However, estimation was done in \cite{Gelmini:2005gy} is very rude and should be verified by honest calculation in the laboratory frame.
 
-In order to solve this issue we apply the following technique:
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%   HERE!!!
+\section{Decay width}
+In comparison with culculations in Lorentz Invariant case, there are two differences. First, phase volume of the process becomes nonzero because of Lorentz non-invariant modifications of photon despersion relation. 
+Second, the matrix element on the process has additionsl terms due to modified polarization sums. 
+\subsection{Matrix element}
+To find the matrix element we apply the following technique.
 The Feynman rules for the relevant vertices are extracted from (\ref{euler}) in a way, the lowest order matrix element for a four-photon process can then be written as
    \begin{equation}
         M = M_{\mu\nu\rho\lambda}(k_1,k_2,k_3,k_4) \varepsilon_\mu(k_1) \varepsilon_\nu (k_2)\varepsilon_\rho(k_3) \varepsilon_\lambda(k_4)
     \end{equation}
 where $k_i$ are the photon four-momenta, and $\varepsilon(k)$ are the corresponding polarization
 vectors.    
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
 For convenience of further calculations let us introduce tensors
 \begin{equation}
     T_{\mu\nu}(k,p) = 2 (pk)g_{\mu\nu} - 2 p_\mu k_\nu
 \end{equation}
 and
 \begin{equation}
-    T^{dual}_{\mu\nu}(k,p) = - 4 k^\pho p^\lambda \varepsilon^{\mu\nu\rho\lambda}
+    T^{dual}_{\mu\nu}(k,p) = - 4 k^{\rho}p^{\lambda} \varepsilon^{\mu\nu\rho\lambda}
 \end{equation}
 Then performing summation over all permutations of on-shell photons obtain following
 \begin{equation}
@@ -142,26 +187,19 @@ Unify both parts
 \end{equation}
 Finally for squared matrix element
     \begin{equation}
-        M^*M =  M^*_{\mu_1\nu_1\rho_1\lambda_1} M_{\mu\nu\rho\lambda}\; \varepsilon_\mu_1(k_1)\varepsilon_\mu(k_1) \;\varepsilon_\nu_1 (k_2) \varepsilon_\nu (k_2)\;\varepsilon_\rho_1(k_3)\varepsilon_\rho(k_3) \; \varepsilon_\lambda_1(k_4)\varepsilon_\lambda(k_4)
+         M^*M =  M^*_{\mu_1\nu_1\rho_1\lambda_1} M_{\mu\nu\rho\lambda}\; \varepsilon_\mu_1(k_1)\varepsilon_\mu(k_1) \;\varepsilon_\nu_1 (k_2) \varepsilon_\nu (k_2)\;\varepsilon_\rho_1(k_3)\varepsilon_\rho(k_3) \; \varepsilon_\lambda_1(k_4)\varepsilon_\lambda(k_4), 
     \label{MatrixElement}    
     \end{equation}
+where  polarization sums $\varepsilon_\nu(k)\varepsilon_\mu(k)$ are given by eq.(\ref{polarizationsums}). 
 The amplitude for for photon scattering $\gamma\gamma \to \gamma\gamma$ in LI theory agrees with the result in Schwartz book (p.717-718) (in Mandelstam variables)
 
-In LV theory polarization sum have following form
-\begin{equation}
-     \varepsilon_\mu_1(k) \varepsilon_\mu(k) = -g_{\mu \mu_1}- \frac{k_0^2}{M^2} u_{\mu} u_{\mu_1}
-\end{equation}
 
-Thus, for LV matrix element we obtain 16 terms like (\ref{MatrixElement}) where each $g_{\mu}g_{\nu}$ may be changed to $u_\mu u_\nu$ or not
-
-In MatrixElement.nb file we calculated two such terms at this moment
-
-
-
-
-\section{Phase volume}
+\subsection{Phase volume}
 %%%%%%%%%%%%%%%%%%%%% Phase volume
-We consider the photon with 4-momentum $k$ which splits to 3 photons with 4-momenta $k_1, k_2, k_3$. We divide 3-momenta of final photons to parallel $k_i^\parallel$ and perpendicular $k_i^\perp$ part (compared to initial photon 3-momenta). 3-momentum conservation gives: $\vec{k}_1^\perp + \vec{k}_2^\perp +\vec{k}_3^\perp = 0$ and $k_1^\parallel +k_2^\parallel + k_3^\parallel = k$. Parallel momenta $k_i^\parallel$ may be reduced to dimensionless variables $\alpha_i$:
+If one outgoing photon carries away almost all
+of the initial photon energy, the emission angles tend to zero, as well as the phase volume.
+To obtain precise value for splitting width we carried out straightforward calculations in
+the laboratory frame.We consider the photon with 4-momentum $k$ which splits to 3 photons with 4-momenta $k_1, k_2, k_3$. We divide 3-momenta of final photons to parallel $k_i^\parallel$ and perpendicular $k_i^\perp$ part (compared to initial photon 3-momenta). 3-momentum conservation gives: $\vec{k}_1^\perp + \vec{k}_2^\perp +\vec{k}_3^\perp = 0$ and $k_1^\parallel +k_2^\parallel + k_3^\parallel = k$. Parallel momenta $k_i^\parallel$ may be reduced to dimensionless variables $\alpha_i$:
 \begin{equation}
 k_i^\parallel = k\, \alpha_i, \qquad \qquad \alpha_1 + \alpha_2+\alpha_3=1.
 \end{equation}
@@ -170,56 +208,42 @@ Perpendicular vectors are 2-vectors in a plane, perpendicular to the initial pho
 (k_3^\perp)^2 = (k_1^\perp)^2 + (k_2^\perp)^2 + 2k_1^\perp k_2^\perp \cos \varphi_2.
 \end{equation}  
 
-Let us describe the phase volume in the general way (for simplicity we omit $2\pi$ factors which I don't remember):
+Let us describe the phase volume in the general way:
 \begin{equation}
 \label{PhaseVolume_1}
-\Phi = \int \frac{d^3k_1 d^3k_2 d^3k_3}{E_1 E_2 E_3} \delta(E-E_1-E_2-E_3)\delta^{(3)}\left( \vec{k} -\vec{k}_1-\vec{k}_2 - \vec{k}_3\right) |M|^2,
+d\Phi =  (2\pi)^4\delta(E-E_1-E_2-E_3)\delta^{(3)}\left(\vec{k} -\vec{k}_1-\vec{k}_2 - \vec{k}_3\right)\frac{1}{2E}\prod_{i=1,2,3}\frac{d\vec{k_i}}{(2\pi)^3(2E_i)},
 \end{equation}
-and consider aforementioned kinematic configuration. We neglect contribution from LV in denominator, $E_1\,E_2\,E_3 = k_1\,k_1\,k_3 = k^3 \alpha_1\alpha_2(1-\alpha_1-\alpha_2)$. We integrate out 3-momentum $k_3$ solving delta-function so the phase volume (\ref{PhaseVolume_1}) goes to
+and consider aforementioned kinematic configuration. Keeping the highest order of magnitude of LV terms we neglect its contribution to denominator $E\,E_1\,E_2\,E_3 \approx |\vec{k}|\,|\vec{k_1}|\,|\vec{k_2}|\,|\vec{k_3}|$. We integrate out 3-momentum $\vec{k_3}$ eliminating one of delta-functions so the phase volume (\ref{PhaseVolume_1}) goes to
 \begin{equation}
 \label{PhaseVolume_2}
-\Phi = \frac{1}{k}\int \frac{d\alpha_1\, d\alpha_2\, d^2k_1^\perp d^2k_2^\perp}{\alpha_1\alpha_2(1-\alpha_1-\alpha_2)} \delta(E-E_1-E_2-E_3) |M|^2.
+d\Phi = \frac{1}{2^8\pi^5}\frac{1}{k}\frac{d\alpha_1\, d\alpha_2\, d^2k_1^\perp d^2k_2^\perp}{\alpha_1\alpha_2(1-\alpha_1-\alpha_2)} \delta(E-E_1-E_2-E_3).
 \end{equation}
 
-In order to go further we make some simplifications. We say that $(k_i^\perp/k)^2$ and $k^2/M^2$ are of the same order of smallness. Thus,
+In order to go further we make some simplifications. We say that $(k_i^\perp/k)^2$ and $k^2/M^2$ are of the same order of smallness, and introduce dimensionless variables $\beta_1$, $\beta_2$:
 \begin{equation}
-\label{E12}
-E_i = k\,\alpha_i + \frac{1}{2k}\frac{\left(k_i^\perp\right)^2}{\alpha_i} + \frac{k^3\alpha_i^3}{2\cdot M^2}, \qquad i=1,2
+k_1^\perp = \frac{k^2}{M}\cdot \beta_1, \qquad \qquad  k_2^\perp = \frac{k^2}{M}\cdot \beta_2.
+\end{equation} 
+Thus,
+\begin{equation}
+    E_i=k\left( \alpha_i + \frac{k^2}{2M^2} \alpha^3_i +  \frac{k^2}{2M^2} \frac{\beta^2_i}{\alpha_i}\right), i=1,2
 \end{equation}
 \begin{equation}
 \label{E3}
 E_{3} = k\,(1-\alpha_1 - \alpha_2) + \frac{1}{2k}\frac{\left(k_{3}^\perp\right)^2}{1-\alpha_1 - \alpha_2} + \frac{k^3(1-\alpha_1 - \alpha_2)^3}{2\cdot M^2},
 \end{equation}
 These expressions may be substituted to the delta-function.
-
-The sum of energies is expressed as
-\begin{align}
-E_1 + E_2 + E_3 = k + \frac{k^3}{2M^2}\left(1 - 3(\alpha_1+\alpha_2)+3(\alpha_1+\alpha_2)^2-3\alpha_1\alpha_2(\alpha_1+\alpha_2) \right)+\\
-+ \frac{1}{2k}\left( \frac{(k_1^\perp)^2}{\alpha_1} + \frac{(k_2^\perp)^2}{\alpha_2} + \frac{(k_1^\perp)^2+(k_2^\perp)^2+2k_1^\perp k_2^\perp \cos \varphi_2}{1-\alpha_1-\alpha_2} \right).
-\end{align}
-
-We introduce dimensionless variables $\beta_1$, $\beta_2$:
-\begin{equation}
-k_1^\perp = \frac{k^2}{M}\cdot \beta_1, \qquad \qquad  k_2^\perp = \frac{k^2}{M}\cdot \beta_2.
-\end{equation}
-
-In these variables eq (\ref{E12}) becomes
-\begin{equation}
-    E_i=k\left( \alpha_i + \frac{k^2}{2M^2} \alpha^3_i +  \frac{k^2}{2M^2} \frac{\beta^2_i}{\alpha_i}\right), i=1,2
-\end{equation}
-
- 
 The inner part of delta-function ($E_1+E_2+E_3-E$) become
 \begin{equation}
    \frac{k^3}{2M^2} \left( 3(\alpha_1+\alpha_2)(1-\alpha_1-\alpha_2 + \alpha_1\alpha_2) + \frac{1}{1-\alpha_1-\alpha_2}\left( \frac{1-\alpha_2}{\alpha_1}\beta_1^2 + \frac{1-\alpha_1}{\alpha_2}\beta_2^2 + 2\beta_1 \beta_2 \cos \varphi_2 \right) \right)   
 \end{equation}
 
-The phase volume (\ref{PhaseVolume_2}) become
+The phase volume (\ref{PhaseVolume_2}) becomes
 \begin{equation}
 \label{PhaseVolume_3}
-\Phi = \frac{2\pi}{k}\left( \frac{k^2}{M}\right)^4 \int \frac{d\alpha_1\, d\alpha_2\, d\varphi_2 d(\beta_1^2) d(\beta_2^2)}{\alpha_1\alpha_2(1-\alpha_1-\alpha_2)} \delta\left[ ...\right] |M|^2.
-\end{equation}
-We take integral over $\varphi_2$ solving delta-function. We obtain $\frac{k^3}{2M^2}\frac{2\beta_1\beta_2}{1-\alpha_1\alpha_2}\sin\varphi_2$ in the denominator. $\varphi_2$ is expressed as
+d\Phi = \frac{1}{2^8\pi^5}\frac{2\pi}{k}\left( \frac{k^2}{M}\right)^4 \frac{d\alpha_1\, d\alpha_2\, d\varphi_2 d(\beta_1^2) d(\beta_2^2)}{\alpha_1\alpha_2(1-\alpha_1-\alpha_2)} \delta\left[ ...\right],
+\end{equation} 
+here additional $2\pi$ factor is the result of integration over $\varphi_1$.
+Integration over $\varphi_2$ solves delta-function. We obtain $\frac{k^3}{2M^2}\frac{2\beta_1\beta_2}{1-\alpha_1\alpha_2}\sin\varphi_2$ in the denominator, $\varphi_2$ is expressed as
 \begin{equation}
 \label{cos_phi_2}
 \cos \varphi_2=\frac{3(\alpha_1+\alpha_2)(1-\alpha_1-\alpha_2)(1-\alpha_1-\alpha_2 + \alpha_1\alpha_2) -\frac{1-\alpha_2}{\alpha_1}\beta_1^2 - \frac{1-\alpha_1}{\alpha_2}\beta_2^2  }{2\beta_1\beta_2}
@@ -227,7 +251,7 @@ We take integral over $\varphi_2$ solving delta-function. We obtain $\frac{k^3}{
 Phase volume:
 \begin{equation}
 \label{PhaseVolume_4}
-\Phi = 2\pi\frac{k^4}{M^2} \int \frac{d\alpha_1\, d\alpha_2\, d\beta_1 d\beta_2}{\alpha_1\alpha_2} \frac{1}{\left. \sin\varphi_2 \right|_{podstanovka}} |M|^2.
+d\Phi = \frac{1}{2^8\pi^5}2\pi\frac{k^4}{M^2} \frac{d\alpha_1\, d\alpha_2\, d\beta_1 d\beta_2}{\alpha_1\alpha_2} \frac{1}{\left. \sin\varphi_2 \right|_{\varphi_2=\varphi_2(\alpha_1,\alpha_2,\beta_1,\beta_2)}}.
 \end{equation}
 
 The area of integration over $(\beta_1,\; \beta_2)$ is determined by the condition: 
@@ -235,7 +259,7 @@ $$
 -1<\cos\varphi_2 <1.
 $$
 It is an area between two ellipses (see Fig.1) depending on $\alpha_1,\alpha_2$.  
-\begin{figure}
+\begin{figure}ter
 \centering
 \includegraphics[width=10cm]{split.pdf}
 \caption{The area of integration over $(\beta_1,\beta_2)$ is between two ellipses for the symmetric case $\alpha_1=\alpha_2=0.33$}
@@ -253,6 +277,12 @@ First, we integrate over $(\beta_1,\; \beta_2)$ for different values of fixed $\
 
 The next step is inegration over longitudial momenta. Integration over $\alpha_2$ with fixed $\alpha_1$ (or vice versa, it must be the same) gives us energy losses. Integral over both $\alpha_1,\alpha_2$ gives the splitting width.
 
+\begin{equation}
+\Gamma = 4\times{}10^4(\frac{2\alpha^2}{45})^2\frac{k^{20}}{2^7\pi^4m_e^8M^{10}}
+\end{equation} 
+
+
+
 \section{Scalar Products}
 \begin{equation}
     (k\, k_i)= \frac{k^4}{2M^2}\left( \alpha_i + \alpha_i^3 + \beta^2_i/\alpha_i \right), \ i=1,2
@@ -261,5 +291,201 @@ The next step is inegration over longitudial momenta. Integration over $\alpha_2
     (k_1\, k_2)= \frac{k^4}{2M^2}\left( \alpha_1\alpha_2(\alpha_1^2+\alpha_2^2) - 3(\alpha_1+\alpha_2)(1-\alpha_1-\alpha_2)(1-\alpha_1-\alpha_2 + \alpha_1\alpha_2) +\frac{\beta_1^2}{\alpha_1} + \frac{\beta_2^2}{\alpha_2} \right)
 \end{equation}
 
+\begin{thebibliography}{99}
+
+%%%%%%%%%%%%%%%%%%%%%%5%% Introduction%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cite{Liberati:2013xla}
+\bibitem{Liberati:2013xla} 
+  S.~Liberati,
+  %``Tests of Lorentz invariance: a 2013 update,''
+  Class.\ Quant.\ Grav.\  {\bf 30}, 133001 (2013).
+%  [arXiv:1304.5795 [gr-qc]].
+  %%CITATION = ARXIV:1304.5795;%%
+
+%\cite{Colladay:1998fq}
+%\bibitem{Colladay:1998fq}
+ % D.~Colladay and V.~A.~Kostelecky,
+  %``Lorentz violating extension of the standard model,''
+ % Phys.\ Rev.\ D {\bf 58} (1998) 116002.
+%  [hep-ph/9809521].
+  %%CITATION = HEP-PH/9809521;%%
+
+%\cite{Myers:2003fd}
+%\bibitem{Myers:2003fd}
+%  R.~C.~Myers and M.~Pospelov,
+  %``Ultraviolet modifications of dispersion relations in effective field theory,''
+ % Phys.\ Rev.\ Lett.\  {\bf 90} (2003) 211601    doi:10.1103/PhysRevLett.90.211601   [hep-ph/0301124].
+  %%CITATION = doi:10.1103/PhysRevLett.90.211601;%%
+  %331 citations counted in INSPIRE as of 13 Jul 2016
+
+%\cite{Kostelecky:2007fx}
+%\bibitem{Kostelecky:2007fx}
+ % V.~A.~Kostelecky and M.~Mewes,
+  %``Lorentz-violating electrodynamics and the cosmic microwave background,''
+%   Phys.\ Rev.\ Lett.\  {\bf 99} (2007) 011601   doi:10.1103/PhysRevLett.99.011601   [astro-ph/0702379 [ASTRO-PH]].
+  %%CITATION = doi:10.1103/PhysRevLett.99.011601;%%
+  %130 citations counted in INSPIRE as of 13 Jul 2016
+
+
+%\cite{Kostelecky:2008ts}
+%\bibitem{Kostelecky:2008ts}
+ % V.~A.~Kostelecky and N.~Russell,
+  %``Data Tables for Lorentz and CPT Violation,''
+%  Rev.\ Mod.\ Phys.\  {\bf 83} (2011) 11.
+%  [arXiv:0801.0287 [hep-ph]].
+  %%CITATION = ARXIV:0801.0287;%%
+
+
+\bibitem{Coleman:1997xq} 
+  S.~R.~Coleman and S.~L.~Glashow,
+  %``Cosmic ray and neutrino tests of special relativity,''
+  Phys.\ Lett.\ B {\bf 405}, 249 (1997).
+%  [hep-ph/9703240].
+  %%CITATION = HEP-PH/9703240;%%
+  %362 citations counted in INSPIRE as of 20 Apr 2013
+
+%\cite{AbuZayyad:2012ru}
+%\bibitem{AbuZayyad:2012ru}
+%  T.~Abu-Zayyad {\it et al.} [Telescope Array Collaboration],
+  %``The Cosmic Ray Energy Spectrum Observed with the Surface Detector of the Telescope Array Experiment,''
+%   Astrophys.\ J.\ Lett {\bf 768} (2013) L1.
+%  arXiv:1205.5067 [astro-ph.HE].
+  %%CITATION = ARXIV:1205.5067;%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cite{Aharonian:2004gb}
+\bibitem{Aharonian:2004gb}
+  F.~Aharonian {\it et al.} [HEGRA Collaboration],
+  %``The Crab nebula and pulsar between 500-GeV and 80-TeV. Observations with the HEGRA stereoscopic air Cerenkov telescopes,''
+  Astrophys.\ J.\  {\bf 614} (2004) 897
+  doi:10.1086/423931
+  [astro-ph/0407118].
+  %%CITATION = doi:10.1086/423931;%%
+  %182 citations counted in INSPIRE as of 13 Jun 2016
+
+
+
+%\cite{Jacobson:2002hd}
+\bibitem{Jacobson:2002hd} 
+  T.~Jacobson, S.~Liberati and D.~Mattingly,
+  %``Threshold effects and Planck scale Lorentz violation: Combined constraints from high-energy astrophysics,''
+  Phys.\ Rev.\ D {\bf 67}, 124011 (2003);
+%  [hep-ph/0209264];
+  %%CITATION = HEP-PH/0209264;%%
+
+%\cite{Jacobson:2005bg}
+%\bibitem{Jacobson:2005bg} 
+%  T.~Jacobson, S.~Liberati and D.~Mattingly,
+  %``Lorentz violation at high energy: Concepts, phenomena and astrophysical constraints,''
+  Annals Phys.\  {\bf 321}, 150 (2006).
+%  [astro-ph/0505267].
+  %%CITATION = ASTRO-PH/0505267;%%
+
+
+
+%\cite{Colladay:2001wk}
+%\bibitem{Colladay:2001wk}
+ % D.~Colladay and V.~A.~Kostelecky,
+  %``Cross-sections and Lorentz violation,''
+%  Phys.\ Lett.\ B {\bf 511} (2001) 209    doi:10.1016/S0370-2693(01)00649-9   [hep-ph/0104300].
+  %%CITATION = doi:10.1016/S0370-2693(01)00649-9;%%
+  %160 citations counted in INSPIRE as of 13 Jul 2016
+
+
+%%%%%%%%%%%%%%%%%%%% END INTRODUCTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cite{Liberati:2012jf}
+\bibitem{Liberati:2012jf}
+  S.~Liberati, L.~Maccione and T.~P.~Sotiriou,
+  %``Scale hierarchy in Horava-Lifshitz gravity: a strong constraint from synchrotron radiation in the Crab nebula,''
+  Phys.\ Rev.\ Lett.\  {\bf 109} (2012) 151602
+  doi:10.1103/PhysRevLett.109.151602
+  [arXiv:1207.0670 [gr-qc]].
+  %%CITATION = doi:10.1103/PhysRevLett.109.151602;%%
+  %30 citations counted in INSPIRE as of 10 Feb 2017
+
+
+%\cite{Maccione:2007yc}
+%\bibitem{Maccione:2007yc} 
+%  L.~Maccione, S.~Liberati, A.~Celotti and J.~G.~Kirk,
+  %``New constraints on Planck-scale Lorentz Violation in QED from the Crab Nebula,''
+%  JCAP {\bf 0710}, 013 (2007).
+ % [arXiv:0707.2673 [astro-ph]].
+  %%CITATION = ARXIV:0707.2673;%%
+  %52 citations counted in INSPIRE as of 07 Mar 2014
+
+%\cite{Rubtsov:2012kb}
+\bibitem{Rubtsov:2012kb}
+  G.~Rubtsov, P.~Satunin and S.~Sibiryakov,
+  %``On calculation of cross sections in Lorentz violating theories,''
+  Phys.\ Rev.\ D {\bf 86} (2012) 085012
+  doi:10.1103/PhysRevD.86.085012
+  [arXiv:1204.5782 [hep-ph]].
+  %%CITATION = doi:10.1103/PhysRevD.86.085012;%%
+  %12 citations counted in INSPIRE as of 15 Jun 2016
+
+
+%%%%%%%%%%%%%%%%%%%%% TIMING %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cite{Vasileiou:2013vra}
+\bibitem{Vasileiou:2013vra}
+  V.~Vasileiou {\it et al.},
+  %``Constraints on Lorentz Invariance Violation from Fermi-Large Area Telescope Observations of Gamma-Ray Bursts,''
+  Phys.\ Rev.\ D {\bf 87} (2013) no.12,  122001
+  doi:10.1103/PhysRevD.87.122001
+  [arXiv:1305.3463 [astro-ph.HE]].
+  %%CITATION = doi:10.1103/PhysRevD.87.122001;%%
+  %44 citations counted in INSPIRE as of 14 Jun 2016
+
+
+%%%%%%%%%%%%%%%%%%%%% PHOTON DECAY %%%%%%%%%%%%%%%%%%%%
+%\cite{Martinez-Huerta:2016azo}
+\bibitem{Martinez-Huerta:2016azo} 
+  H.~Martínez-Huerta and A.~Pérez-Lorenzana,
+  ``Restrictive scenarios from Lorentz Invariance Violation to cosmic
+  rays propagation,'' 
+  arXiv:1610.00047 [astro-ph.HE].
+  %%CITATION = ARXIV:1610.00047;%%
+%%%%%%%%%%%%%%%%%%%%%% PHOTON SPLITTING %%%%%%%%%%%%%%%%%%
+
+
+%\cite{Adam:2002rg}
+\bibitem{Adam:2002rg}
+  C.~Adam and F.~R.~Klinkhamer,
+  %``Photon decay in a CPT violating extension of quantum electrodynamics,''
+  Nucl.\ Phys.\ B {\bf 657} (2003) 214
+  doi:10.1016/S0550-3213(03)00143-3
+  [hep-th/0212028].
+  %%CITATION = doi:10.1016/S0550-3213(03)00143-3;%%
+  %98 citations counted in INSPIRE as of 14 Jun 2016
+
+
+%\cite{Gelmini:2005gy}
+\bibitem{Gelmini:2005gy}
+  G.~Gelmini, S.~Nussinov and C.~E.~Yaguna,
+  %``On photon splitting in theories with Lorentz invariance violation,''
+  JCAP {\bf 0506} (2005) 012
+  doi:10.1088/1475-7516/2005/06/012
+  [hep-ph/0503130].
+  %%CITATION = doi:10.1088/1475-7516/2005/06/012;%%
+  %13 citations counted in INSPIRE as of 13 Jun 2016
+
+
+
+
+%\cite{Rubtsov:2016bea}
+\bibitem{Rubtsov:2016bea}
+  G.~Rubtsov, P.~Satunin and S.~Sibiryakov,
+  %``Constraints on violation of Lorentz invariance from atmospheric showers initiated by multi-TeV photons,''
+  JCAP {\bf 1705} (2017) 049
+  doi:10.1088/1475-7516/2017/05/049
+  [arXiv:1611.10125 [astro-ph.HE]].
+  %%CITATION = doi:10.1088/1475-7516/2017/05/049;%%
+  %20 citations counted in INSPIRE as of 11 Jan 2019
+
+
 
 \end{document}
+
